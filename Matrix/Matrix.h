@@ -42,6 +42,10 @@ public:
 
 	const double & at(uint row, uint col) const; // get element at row,col (when using a const object)
 
+private:
+	double **matrix;
+	uint num_rows, num_cols;
+
 }; // Matrix
 
 #endif // !MATRIX_H_
