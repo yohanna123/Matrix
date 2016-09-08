@@ -5,9 +5,11 @@
 
 Matrix::Matrix(uint rows, uint cols)
 {
-	num_rows = rows;
+	num_rows = rows; //test test 123
 	num_cols = cols;
-	matrix = new double*[rows];
+	matrix = new double* [rows]; //matrix is a pointer that points to the amout of memory held by  rows
+	//new allocates amt of memory to reserve
+	new double matrix[rows][cols]; //can we write the above like this instead?
 	for (uint i = 0; i < cols; ++i)
 	{
 		matrix[i] = new double[cols];
@@ -28,7 +30,7 @@ Matrix::~Matrix()
 {
 	for (uint i = 0; i < num_cols; ++i)
 	{
-		delete [] matrix[i];
+		delete [] matrix[i]; // returns memory to the free store
 	}
 	delete [] matrix;
 }
